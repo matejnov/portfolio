@@ -1,0 +1,329 @@
+/* Mobilní checkout — scoped pod .co-mobile, zobrazeno jen pod 768px */
+.co-mobile { display: none; }
+@media (max-width: 767px) {
+  .co-desktop { display: none !important; }
+  .co-mobile { display: block; }
+}
+
+.co-mobile { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+.co-mobile, .co-mobile { margin: 0; height: 100%; }
+.co-mobile { font-family: var(--font-body); color: var(--navy-ink); background: var(--bg-strip); }
+.co-mobile a { color: var(--teal); text-decoration: none; cursor: pointer; }
+.co-mobile a:hover { color: var(--teal-dark); }
+.co-mobile input::placeholder, .co-mobile textarea::placeholder { color: var(--faint-2); font-weight: 500; }
+.co-mobile button { font-family: inherit; }
+.co-mobile input, .co-mobile textarea { font-family: inherit; }
+.co-mobile ::-webkit-scrollbar { width: 0; height: 0; }
+.co-mobile { min-height: 60vh; }
+.co-mobile__app { width: 100%; display: flex; flex-direction: column; background: var(--bg-strip); min-height: 100vh; }
+
+.co-mobile .screen { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.co-mobile .scroll { flex: 1; overflow-y: auto; overflow-x: hidden; }
+.co-mobile .brandbar { flex: none; background: var(--navy); padding: 16px 18px 12px; }
+
+.co-mobile .brandbar__row { display: flex; align-items: center; justify-content: space-between; }
+.co-mobile .brand { font-size: 19px; font-weight: 800; letter-spacing: -0.3px; color: #fff; }
+.co-mobile .brand span { color: var(--mint); }
+.co-mobile .secure { display: flex; align-items: center; gap: 6px; }
+.co-mobile .secure span { font-size: 11px; font-weight: 600; color: var(--placeholder); }
+.co-mobile .stepper { background: #fff; padding: 16px 22px 14px; border-bottom: 1px solid var(--border-4); position: relative; }
+.co-mobile .stepper__line { position: absolute; left: 52px; right: 52px; top: 32px; height: 2px; background: var(--border-4); }
+.co-mobile .stepper__fill { position: absolute; left: 52px; top: 32px; height: 2px; background: var(--green-alt); }
+.co-mobile .stepper__row { display: flex; justify-content: space-between; position: relative; }
+.co-mobile .cstep { display: flex; flex-direction: column; align-items: center; gap: 7px; width: 66px; cursor: pointer; background: none; border: none; padding: 0; }
+.co-mobile .cstep__num { width: 28px; height: 28px; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.co-mobile .cstep__num--active { background: var(--navy); color: #fff; }
+.co-mobile .cstep__num--done { background: var(--green-alt); color: #fff; }
+.co-mobile .cstep__num--todo { background: #fff; border: 2px solid var(--star-empty); color: var(--faint); }
+.co-mobile .cstep__label { font-size: 10.5px; text-align: center; line-height: 1.2; }
+.co-mobile .cstep__label--on { font-weight: 700; color: var(--navy); }
+.co-mobile .cstep__label--done { font-weight: 600; color: var(--green-alt); }
+.co-mobile .cstep__label--todo { font-weight: 500; color: var(--faint); }
+.co-mobile .scr-title { font-size: 26px; font-weight: 800; letter-spacing: -0.6px; color: var(--navy); }
+.co-mobile .card { background: #fff; border: 1px solid var(--border-4); border-radius: 16px; padding: 16px; }
+.co-mobile .fld-label { font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+.co-mobile .inp { width: 100%; border: 1px solid var(--star-empty); border-radius: 11px; padding: 12px; font-size: 13.5px; font-weight: 500; color: var(--navy-ink); background: #fff; outline: none; }
+.co-mobile .inp:focus { border-color: var(--teal); }
+.co-mobile .divider { height: 1px; background: var(--border-3); margin: 13px 0; }
+.co-mobile .cta { flex: 1; height: 46px; border: none; border-radius: 13px; background: var(--coral); color: #fff; font-size: 13px; font-weight: 800; letter-spacing: 0.2px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 6px 16px rgba(239,92,58,0.4); }
+.co-mobile .cta:hover { filter: brightness(1.05); }
+.co-mobile .footer-bar { position: sticky; bottom: 0; min-height: var(--checkout-bar-h); box-sizing: border-box; background: var(--navy); padding: 13px 16px 26px; display: flex; align-items: center; gap: 14px; box-shadow: 0 -6px 20px rgba(13,46,53,0.14); }
+.co-mobile .footer-bar__total-label { font-size: 11px; font-weight: 500; color: var(--gray-stock); line-height: 1.2; }
+.co-mobile .footer-bar__total { font-size: 20px; font-weight: 800; color: #fff; letter-spacing: -0.4px; line-height: 1.2; white-space: nowrap; }
+.co-mobile .backlink { display: flex; align-items: center; gap: 6px; padding: 16px 18px; font-size: 13.5px; font-weight: 700; }
+.co-mobile .srow { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 7px; }
+.co-mobile .srow__k { color: var(--muted); font-weight: 500; }
+.co-mobile .srow__v { color: var(--navy-ink); font-weight: 600; }
+.co-mobile .grand { display: flex; align-items: baseline; justify-content: space-between; }
+.co-mobile .grand__k { font-size: 12px; font-weight: 500; color: var(--faint); }
+.co-mobile .grand__v { font-size: 23px; font-weight: 800; color: var(--navy); letter-spacing: -0.5px; }
+.co-mobile .grand__v em { font-style: italic; }
+.co-mobile .hidden { display: none !important; }
+
+/* ── A4-6: třídy vytažené z js/kosik.js (hodnoty přeneseny 1:1, vzhled beze změny) ── */
+
+/* mini řádek souhrnu */
+.co-mobile .mini-row { display: flex; align-items: center; gap: 11px; margin-bottom: 11px; }
+.co-mobile .mini-row__thumb { width: 42px; height: 42px; border-radius: 9px; background: repeating-linear-gradient(135deg,var(--co-thumb-1),var(--co-thumb-1) 5px,var(--co-thumb-2) 5px,var(--co-thumb-2) 10px); border: 1px solid var(--co-border); flex-shrink: 0; }
+.co-mobile .mini-row__body { flex: 1; min-width: 0; }
+.co-mobile .mini-row__name { font-size: 13px; font-weight: 700; color: var(--co-ink); line-height: 1.2; }
+.co-mobile .mini-row__meta { font-size: 11px; font-weight: 500; color: var(--co-muted); margin-top: 2px; }
+.co-mobile .mini-row__price { font-size: 13.5px; font-weight: 800; color: var(--co-red); white-space: nowrap; }
+
+/* varianty hodnot v souhrnných řádcích */
+.co-mobile .srow__k--sale { color: var(--co-red); font-weight: 600; }
+.co-mobile .srow__v--sale { color: var(--co-red); font-weight: 700; }
+.co-mobile .srow__v--ink { color: var(--co-ink); font-weight: 700; }
+.co-mobile .srow__v--free { color: var(--co-green); font-weight: 700; }
+.co-mobile .srow__v--none { color: var(--co-faint); font-weight: 700; }
+
+/* prázdný košík */
+.co-mobile .empty-cart { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 56px 28px; }
+.co-mobile .empty-cart__icon { color: var(--faint-2); margin-bottom: 20px; }
+.co-mobile .empty-cart__title { margin-bottom: 8px; }
+.co-mobile .empty-cart__text { font-size: 13.5px; color: var(--faint); line-height: 1.5; max-width: 280px; margin-bottom: 24px; }
+.co-mobile .empty-cart__cta { flex: none; width: 100%; max-width: 240px; }
+
+/* hlavička košíku + pruh dopravy zdarma */
+.co-mobile .cart-head { display: flex; align-items: baseline; justify-content: space-between; padding: 18px 18px 12px; }
+.co-mobile .cart-head__count { font-size: 12px; font-weight: 500; color: var(--co-muted); }
+.co-mobile .ship-note { margin: 0 18px 16px; background: var(--co-green-bg); border: 1px solid var(--co-green-border); border-radius: 14px; padding: 13px 14px; }
+.co-mobile .ship-note__row { display: flex; align-items: flex-start; gap: 9px; }
+.co-mobile .ship-note__ic { flex-shrink: 0; margin-top: 1px; color: var(--co-green); }
+.co-mobile .ship-note__text { font-size: 12.5px; font-weight: 500; color: var(--co-green-text); line-height: 1.45; }
+.co-mobile .ship-note__text strong { font-weight: 800; color: var(--green-deep); }
+.co-mobile .ship-note__track { height: 6px; border-radius: 4px; background: var(--co-green-border); margin-top: 11px; overflow: hidden; }
+.co-mobile .ship-note__fill { height: 100%; width: 100%; background: var(--co-green); border-radius: 4px; }
+
+/* karta položky + swipe pozadí */
+.co-mobile .co-list { display: flex; flex-direction: column; gap: 12px; padding: 0 18px; }
+.co-mobile .cart-swipe { position: relative; border-radius: 16px; overflow: hidden; }
+.co-mobile .cart-swipe__bg { position: absolute; inset: 0; background: var(--co-red); border-radius: 16px; display: flex; align-items: center; justify-content: flex-end; padding-right: 22px; gap: 8px; color: #fff; }
+.co-mobile .cart-swipe__label { font-size: 13px; font-weight: 800; color: #fff; }
+.co-mobile .cart-card { position: relative; background: #fff; border: 1px solid var(--co-border); border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 13px; touch-action: pan-y; }
+.co-mobile .cart-card__top { display: flex; gap: 12px; }
+.co-mobile .cart-card__thumb { width: 76px; height: 76px; border-radius: 12px; background: repeating-linear-gradient(135deg,var(--co-thumb-1),var(--co-thumb-1) 6px,var(--co-thumb-2) 6px,var(--co-thumb-2) 12px); border: 1px solid var(--co-border); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; flex-shrink: 0; }
+.co-mobile .cart-card__thumb-label { font-family: ui-monospace, monospace; font-size: 8px; color: var(--co-faint); }
+.co-mobile .cart-card__body { flex: 1; min-width: 0; }
+.co-mobile .cart-card__brand { font-size: 10px; font-weight: 700; letter-spacing: 0.6px; color: var(--co-muted); }
+.co-mobile .cart-card__name { font-size: 14.5px; font-weight: 700; color: var(--co-ink); line-height: 1.25; margin-top: 3px; }
+.co-mobile .cart-card__variant { font-size: 12px; font-weight: 500; color: var(--co-muted); margin-top: 3px; }
+.co-mobile .cart-card__stock { display: flex; align-items: center; gap: 6px; margin-top: 7px; font-size: 11.5px; font-weight: 600; color: var(--co-green); }
+.co-mobile .cart-card__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--co-green); }
+.co-mobile .cart-card__menuwrap { position: relative; flex-shrink: 0; }
+.co-mobile .cart-card__menubtn { width: 32px; height: 32px; border: none; background: none; cursor: pointer; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 8px; color: var(--co-dots); }
+
+/* kontextové menu položky */
+.co-mobile .card-menu { position: absolute; top: 36px; right: 0; z-index: 20; background: #fff; border: 1px solid var(--co-border); border-radius: 12px; box-shadow: 0 8px 24px rgba(13,46,53,0.16); padding: 5px; width: 210px; }
+.co-mobile .card-menu__item { width: 100%; display: flex; align-items: center; gap: 10px; border: none; background: none; cursor: pointer; padding: 10px 11px; border-radius: 8px; font-size: 13.5px; font-weight: 600; color: var(--co-ink); text-align: left; }
+.co-mobile .card-menu__item svg { color: var(--co-navy); }
+.co-mobile .card-menu__item--danger { color: var(--co-red); }
+.co-mobile .card-menu__item--danger svg { color: var(--co-red); }
+
+/* množství a ceny v kartě */
+.co-mobile .cart-card__foot { display: flex; align-items: center; justify-content: space-between; }
+.co-mobile .co-qty { display: flex; align-items: center; border: 1px solid var(--co-border-2); border-radius: 11px; overflow: hidden; background: #fff; }
+.co-mobile .co-qty__btn { width: 38px; height: 38px; border: none; background: none; cursor: pointer; font-size: 20px; font-weight: 500; color: var(--co-qty); display: flex; align-items: center; justify-content: center; padding: 0; }
+.co-mobile .co-qty__num { min-width: 34px; text-align: center; font-size: 15px; font-weight: 700; color: var(--co-ink); }
+.co-mobile .cart-card__prices { text-align: right; }
+.co-mobile .cart-card__old { font-size: 12px; font-weight: 500; color: var(--co-faint); text-decoration: line-through; }
+.co-mobile .cart-card__price { font-size: 17px; font-weight: 800; color: var(--co-red); letter-spacing: -0.3px; }
+
+/* často kupováno společně */
+.co-mobile .co-xsell { padding: 4px 18px 8px; }
+.co-mobile .co-xsell__title { font-size: 15px; font-weight: 800; color: var(--co-navy); margin-bottom: 11px; }
+.co-mobile .co-xsell__list { display: flex; flex-direction: column; gap: 10px; }
+.co-mobile .co-xsell-row { display: flex; align-items: center; gap: 11px; background: #fff; border: 1px solid var(--co-border); border-radius: 14px; padding: 11px 12px; }
+.co-mobile .co-xsell-row__thumb { width: 46px; height: 46px; border-radius: 10px; background: repeating-linear-gradient(135deg,var(--co-thumb-1),var(--co-thumb-1) 5px,var(--co-thumb-2) 5px,var(--co-thumb-2) 10px); border: 1px solid var(--co-border); flex-shrink: 0; }
+.co-mobile .co-xsell-row__body { flex: 1; min-width: 0; }
+.co-mobile .co-xsell-row__name { font-size: 13px; font-weight: 700; color: var(--co-ink); line-height: 1.2; }
+.co-mobile .co-xsell-row__price { font-size: 13px; font-weight: 800; color: var(--co-navy); margin-top: 3px; }
+.co-mobile .co-xsell-row__btn { border: 1.5px solid var(--co-navy); background: none; color: var(--co-navy); font-size: 12.5px; font-weight: 700; padding: 8px 16px; border-radius: 9px; cursor: pointer; }
+
+/* slevový kód */
+.co-mobile .coupon { display: flex; gap: 8px; }
+.co-mobile .coupon__field { flex: 1; min-width: 0; position: relative; display: flex; align-items: center; }
+.co-mobile .coupon__input { padding-right: 34px; font-size: 12.5px; font-weight: 600; }
+.co-mobile .coupon__check { position: absolute; right: 11px; color: var(--co-green); }
+.co-mobile .coupon__btn { border: 1.5px solid var(--co-navy); background: #fff; color: var(--co-navy); font-size: 12.5px; font-weight: 700; padding: 0 16px; border-radius: 10px; cursor: pointer; }
+.co-mobile .coupon__btn--off { border-color: var(--border-2); color: var(--muted); }
+.co-mobile .coupon__error { font-size: 12px; font-weight: 600; color: var(--red-sale); margin-top: 7px; }
+
+/* souhrnová karta a patka */
+.co-mobile .sum-card { margin: 12px 18px; background: #fff; border: 1px solid var(--co-border); border-radius: 16px; padding: 16px; }
+.co-mobile .sum-card__title { font-size: 15px; font-weight: 800; color: var(--co-navy); margin-bottom: 14px; }
+.co-mobile .scroll__tail { height: 8px; }
+.co-mobile .footer-bar__left { min-width: 0; }
+.co-mobile .backlink svg { color: var(--co-link); }
+
+/* ── A4-6 (2/2): obrazovky Dodací údaje + Doprava a platba ── */
+
+/* společné rozvržení obrazovek */
+.co-mobile .scr-head { padding: 18px 18px 12px; }
+.co-mobile .scr-head--tight { padding: 18px 18px 4px; }
+.co-mobile .card-pad { margin: 0 18px 14px; }
+.co-mobile .fields { display: flex; flex-direction: column; gap: 13px; }
+.co-mobile .fld-row { display: flex; gap: 10px; }
+.co-mobile .fld-col { flex: 1; min-width: 0; }
+.co-mobile .fld-col--wide { flex: 1.7; }
+.co-mobile .co-req { color: var(--co-red); }
+
+/* hlavička recapu */
+.co-mobile .recap-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 13px; }
+.co-mobile .recap-head__title { font-size: 15px; font-weight: 800; color: var(--co-navy); }
+.co-mobile .recap-head__edit { border: none; background: none; cursor: pointer; font-size: 12.5px; font-weight: 700; color: var(--co-link); padding: 0; }
+
+/* karta „Nakupuji na firmu" + přepínač */
+.co-mobile .biz { display: flex; align-items: center; gap: 12px; }
+.co-mobile .biz__ic { width: 40px; height: 40px; border-radius: 11px; background: var(--co-tile-bg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--co-navy); }
+.co-mobile .biz__body { flex: 1; min-width: 0; }
+.co-mobile .biz__title { font-size: 14px; font-weight: 800; color: var(--co-ink); }
+.co-mobile .biz__sub { font-size: 11.5px; font-weight: 500; color: var(--co-muted); line-height: 1.35; margin-top: 2px; }
+.co-mobile .co-toggle { width: 48px; height: 28px; border-radius: 999px; border: none; cursor: pointer; flex-shrink: 0; padding: 3px; display: flex; justify-content: flex-start; background: var(--co-track-off); transition: background 0.2s; }
+.co-mobile .co-toggle--on { justify-content: flex-end; background: var(--co-navy); }
+.co-mobile .co-toggle__knob { width: 22px; height: 22px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.25); }
+
+/* načtení z ARES */
+.co-mobile .co-ico__label { font-size: 11.5px; font-weight: 700; color: var(--co-ink); margin-bottom: 7px; }
+.co-mobile .co-ico-row { display: flex; gap: 9px; }
+.co-mobile .co-ico-row__input { flex: 1; min-width: 0; }
+.co-mobile .co-ico-row__btn { height: 44px; border: none; background: var(--co-navy); color: #fff; font-size: 12.5px; font-weight: 700; padding: 0 15px; border-radius: 11px; cursor: pointer; white-space: nowrap; }
+.co-mobile .co-ico-hint { display: flex; align-items: flex-start; gap: 6px; margin-top: 9px; color: var(--co-faint); }
+.co-mobile .co-ico-hint svg { flex-shrink: 0; margin-top: 1px; }
+.co-mobile .co-ico-hint__text { font-size: 11.5px; font-weight: 500; color: var(--co-muted); line-height: 1.4; }
+.co-mobile .co-manual { display: flex; justify-content: center; margin-top: 12px; }
+.co-mobile .co-manual__link { border: none; background: none; cursor: pointer; font-size: 12.5px; font-weight: 700; color: var(--co-navy); text-decoration: underline; text-underline-offset: 2px; padding: 4px; }
+
+/* ruční fakturační údaje */
+.co-mobile .biz-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.co-mobile .biz-head__title { font-size: 15px; font-weight: 800; color: var(--co-navy); }
+.co-mobile .biz-head__back { border: none; background: none; cursor: pointer; font-size: 12px; font-weight: 700; color: var(--co-link); display: flex; align-items: center; gap: 3px; padding: 0; }
+.co-mobile .vat-switch { display: inline-flex; background: var(--co-switch-bg); border-radius: 10px; padding: 3px; gap: 3px; }
+.co-mobile .vat-btn { border: none; cursor: pointer; font-size: 13px; font-weight: 700; padding: 7px 20px; border-radius: 8px; background: transparent; color: var(--co-muted); box-shadow: none; }
+.co-mobile .vat-btn--on { background: #fff; color: var(--co-ink); box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+
+/* pruh s termínem doručení */
+.co-mobile .delivery-note { margin: 8px 18px 16px; background: var(--co-green-bg); border: 1px solid var(--co-green-border); border-radius: 14px; padding: 12px 14px; display: flex; align-items: center; gap: 9px; color: var(--co-green); }
+.co-mobile .delivery-note svg { flex-shrink: 0; }
+.co-mobile .delivery-note__text { font-size: 12.5px; font-weight: 500; color: var(--co-green-text); line-height: 1.4; }
+.co-mobile .delivery-note__text strong { font-weight: 800; color: var(--green-deep); }
+
+/* číslované hlavičky sekcí */
+.co-mobile .sec-head { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
+.co-mobile .sec-head--split { justify-content: space-between; gap: 0; }
+.co-mobile .sec-head__group { display: flex; align-items: center; gap: 9px; }
+.co-mobile .sec-head__num { width: 24px; height: 24px; border-radius: 7px; background: var(--co-tile-bg); color: var(--co-navy); font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.co-mobile .sec-head__label { font-size: 15px; font-weight: 800; color: var(--co-navy); }
+.co-mobile .sec-head__secure { display: flex; align-items: center; gap: 5px; color: var(--co-green); }
+.co-mobile .sec-head__secure span { font-size: 11.5px; font-weight: 700; color: var(--co-green); }
+
+/* volba dopravy / platby */
+.co-mobile .opt { width: 100%; text-align: left; display: flex; align-items: center; gap: 12px; background: #fff; border: 1.5px solid var(--co-border); border-radius: 13px; padding: 14px; cursor: pointer; margin-bottom: 10px; }
+.co-mobile .opt--on { border-color: var(--co-navy); }
+.co-mobile .opt__radio { width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--co-border-3); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.co-mobile .opt--on .opt__radio { border-color: var(--co-navy); }
+.co-mobile .opt__dot { width: 10px; height: 10px; border-radius: 50%; background: transparent; }
+.co-mobile .opt--on .opt__dot { background: var(--co-navy); }
+.co-mobile .opt__icon { width: 22px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.co-mobile .opt__body { flex: 1; min-width: 0; }
+.co-mobile .opt__title { display: block; font-size: 13.5px; font-weight: 700; color: var(--co-ink); line-height: 1.25; }
+.co-mobile .opt__sub { display: block; font-size: 11.5px; font-weight: 500; color: var(--co-muted); margin-top: 2px; }
+.co-mobile .opt__price { font-size: 13px; font-weight: 700; color: var(--co-ink); white-space: nowrap; }
+.co-mobile .opt__price--free { color: var(--co-green); }
+
+/* poznámka k objednávce */
+.co-mobile .note-card__title { font-size: 14px; font-weight: 800; color: var(--co-navy); margin-bottom: 4px; }
+.co-mobile .note-card__hint { font-size: 11.5px; font-weight: 500; color: var(--co-muted); }
+.co-mobile .note-card__area { min-height: 76px; resize: vertical; margin-top: 8px; }
+
+/* ── A4-6 (3/3a): obrazovka Shrnutí ── */
+.co-mobile .sum-card__title--tight { margin-bottom: 13px; }
+
+/* read-only údaje */
+.co-mobile .ro-list { display: flex; flex-direction: column; gap: 11px; }
+.co-mobile .ro-field__k { font-size: 11px; font-weight: 500; color: var(--co-muted); }
+.co-mobile .ro-field__v { font-size: 13.5px; font-weight: 700; color: var(--co-ink); margin-top: 2px; }
+
+/* zvolená doprava / platba */
+.co-mobile .method-row { display: flex; align-items: center; gap: 11px; }
+.co-mobile .method-row--gap { margin-bottom: 12px; }
+.co-mobile .method-row__ic { width: 34px; height: 34px; border-radius: 9px; background: var(--co-tile-bg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.co-mobile .method-row__body { flex: 1; min-width: 0; }
+.co-mobile .method-row__title { font-size: 13.5px; font-weight: 700; color: var(--co-ink); }
+.co-mobile .method-row__sub { font-size: 11.5px; font-weight: 500; color: var(--co-muted); margin-top: 1px; }
+
+/* poznámka — zavřená i otevřená */
+.co-mobile .note-stub { margin: 0 18px 14px; background: #fff; border: 1px solid var(--co-border); border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 10px; color: var(--co-muted); }
+.co-mobile .note-stub__text { flex: 1; font-size: 13px; font-weight: 500; color: var(--co-muted); }
+.co-mobile .note-stub__btn { border: none; background: none; cursor: pointer; font-size: 12.5px; font-weight: 700; color: var(--co-link); padding: 0; }
+.co-mobile .note-open__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.co-mobile .note-open__title { font-size: 13.5px; font-weight: 800; color: var(--co-navy); }
+.co-mobile .note-open__cancel { border: none; background: none; cursor: pointer; font-size: 12px; font-weight: 700; color: var(--co-muted); padding: 0; }
+.co-mobile .note-open__area { min-height: 70px; resize: vertical; }
+
+/* celkem + souhlas */
+.co-mobile .grand--lg { margin-bottom: 15px; }
+.co-mobile .grand__v--lg { font-size: 25px; }
+.co-mobile .terms { display: flex; align-items: flex-start; gap: 9px; cursor: pointer; }
+.co-mobile .terms__box { width: 20px; height: 20px; border-radius: 6px; border: 1.5px solid var(--co-border-4); background: #fff; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+.co-mobile .terms--on .terms__box { border-color: var(--co-green); background: var(--co-green); }
+.co-mobile .terms__text { font-size: 12px; font-weight: 500; color: var(--co-terms); line-height: 1.45; }
+.co-mobile .terms__text a { font-weight: 700; }
+
+/* patka s platbou */
+.co-mobile .footer-bar--stack { flex-direction: column; align-items: stretch; gap: 9px; }
+.co-mobile .cta--pay { width: 100%; height: 52px; font-size: 14.5px; border-radius: 14px; }
+.co-mobile .pay-disclaimer { font-size: 11px; font-weight: 500; color: var(--co-disclaimer); text-align: center; line-height: 1.4; }
+
+/* ── A4-6 (3/3b): obrazovka Potvrzení ── */
+.co-mobile .done-screen { background: var(--co-screen-bg); }
+.co-mobile .done-hero { padding: 34px 20px 6px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.co-mobile .done-hero__badge { width: 72px; height: 72px; border-radius: 50%; background: var(--co-green); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 22px rgba(63,158,106,0.35); }
+.co-mobile .done-hero__title { font-size: 23px; font-weight: 800; letter-spacing: -0.5px; color: var(--co-navy); margin-top: 16px; }
+.co-mobile .done-hero__text { font-size: 13px; font-weight: 500; color: var(--co-terms); line-height: 1.5; margin-top: 8px; max-width: 300px; }
+.co-mobile .done-hero__text strong { font-weight: 800; color: var(--co-ink); }
+.co-mobile .done-hero__text strong.done-hero__mail { font-weight: 700; color: var(--co-link); }
+
+/* info dlaždice */
+.co-mobile .done-tiles { display: flex; flex-direction: column; gap: 10px; padding: 20px 18px 0; }
+.co-mobile .info-tile { border-radius: 14px; padding: 14px; }
+.co-mobile .info-tile__head { display: flex; align-items: center; gap: 7px; margin-bottom: 8px; color: var(--co-muted); }
+.co-mobile .info-tile__label { font-size: 11px; font-weight: 700; letter-spacing: 0.4px; color: var(--co-muted); text-transform: uppercase; }
+.co-mobile .info-tile__title { font-size: 14px; font-weight: 800; color: var(--co-ink); }
+.co-mobile .info-tile__sub { font-size: 12px; font-weight: 500; color: var(--co-muted); margin-top: 2px; }
+.co-mobile .info-tile__stock { display: flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 12px; font-weight: 700; color: var(--co-green); }
+.co-mobile .info-tile__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--co-green); }
+.co-mobile .info-tile__chip { display: inline-flex; align-items: center; gap: 5px; margin-top: 8px; background: var(--co-green-bg); border-radius: 7px; padding: 5px 9px; font-size: 11.5px; font-weight: 700; color: var(--co-green-text); }
+.co-mobile .info-tile__link { display: inline-flex; align-items: center; gap: 6px; margin-top: 9px; font-size: 12.5px; font-weight: 700; }
+
+/* tracker stavu objednávky */
+.co-mobile .tracker { margin: 18px 18px 0; }
+.co-mobile .tracker__title { font-size: 15px; font-weight: 800; color: var(--co-navy); margin-bottom: 16px; }
+.co-mobile .trk { display: flex; gap: 13px; }
+.co-mobile .trk__rail { display: flex; flex-direction: column; align-items: center; }
+.co-mobile .trk__bullet { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.co-mobile .trk--done .trk__bullet { background: var(--co-green); }
+.co-mobile .trk--now .trk__bullet { background: #fff; border: 2px solid var(--co-link); color: var(--co-link); }
+.co-mobile .trk--muted .trk__bullet { background: var(--co-bullet-bg); color: var(--co-icon-muted); }
+.co-mobile .trk__line { width: 2px; flex: 1; background: var(--co-rail); min-height: 20px; }
+.co-mobile .trk__line--done { background: var(--co-green); }
+.co-mobile .trk__body { padding-bottom: 16px; }
+.co-mobile .trk__title { font-size: 13.5px; font-weight: 800; color: var(--co-ink); }
+.co-mobile .trk__time { font-size: 11.5px; font-weight: 500; color: var(--co-muted); margin-top: 1px; }
+.co-mobile .trk--muted .trk__title { font-weight: 700; color: var(--co-faint-2); }
+.co-mobile .trk--muted .trk__time { color: var(--co-faint); }
+
+/* souhrn na potvrzení */
+.co-mobile .done-sum { margin: 14px 18px 0; }
+.co-mobile .done-sum__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 13px; }
+.co-mobile .done-sum__title { font-size: 15px; font-weight: 800; color: var(--co-navy); }
+.co-mobile .done-sum__meta { font-size: 11.5px; font-weight: 500; color: var(--co-muted); }
+.co-mobile .grand__v--md { font-size: 24px; }
+
+/* akce a patička */
+.co-mobile .done-actions { padding: 18px 18px 8px; display: flex; flex-direction: column; gap: 10px; }
+.co-mobile .btn-ghost { height: 48px; border: 1.5px solid var(--co-navy); background: #fff; color: var(--co-navy); font-size: 13.5px; font-weight: 700; border-radius: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.co-mobile .cta--done { height: 48px; }
+.co-mobile .done-help { padding: 6px 24px 28px; text-align: center; font-size: 11.5px; font-weight: 500; color: var(--co-muted); line-height: 1.5; }
+.co-mobile .done-help strong { font-weight: 700; color: var(--co-ink); }
+.co-mobile .done-help a { font-weight: 700; }

@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matěj Novák — Developer & Designer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111519'/%3E%3Ctext x='16' y='21.5' font-family='system-ui,sans-serif' font-weight='700' font-size='14' fill='%235DCAA5' text-anchor='middle'%3EMN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Particles background -->
+  <canvas id="particles"></canvas>
+
+  <!-- Floating Shapes -->
+  <div class="floating-shapes">
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="#" class="nav-logo" data-hover>Matěj <span>Novák</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" data-hover>O mně</a></li>
+        <li><a href="#projects" data-hover>Projekty</a></li>
+        <li><a href="#contact" data-hover>Kontakt</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta" data-hover>Napište mi →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-mouse-glow" id="heroGlow"></div>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Developer & Designer</div>
+      <h1>
+        <span class="line"><span>Přetvářím weby</span></span>
+        <span class="line"><span>v něco <span class="accent" data-text="lepšího">lepšího</span></span></span>
+      </h1>
+      <p class="hero-sub">Vývojář se smyslem pro design. Redesignuji weby tak, aby vypadaly moderně a fungovaly bezchybně.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" data-hover>Moje práce</a>
+        <a href="#contact" class="btn btn-ghost" data-hover>Spojme se</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-hint-line"></div>
+      scroll
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span>Frontend</span><span class="m-accent">UI/UX</span>
+      <span>Redesign</span><span class="m-accent">Responsive</span>
+      <span>CSS</span><span class="m-accent">JavaScript</span>
+      <span>AI</span><span class="m-accent">Branding</span>
+      <span>Frontend</span><span class="m-accent">UI/UX</span>
+      <span>Redesign</span><span class="m-accent">Responsive</span>
+      <span>CSS</span><span class="m-accent">JavaScript</span>
+      <span>AI</span><span class="m-accent">Branding</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <div class="section-label reveal">O mně</div>
+          <h2 class="section-title reveal reveal-d1">Grafika mě naučila <span class="accent">vidět</span>,<br>kód mi dal sílu <span class="accent">tvořit</span></h2>
+          <div class="about-text reveal reveal-d2 reveal-left">
+            <p>Vystudoval jsem počítačovou grafiku na SPŠE, kde jsem se zamiloval do vizuálního designu i do programování. Dnes pracuji jako vývojář, kde spojuji obojí — redesignuji weby tak, aby nejen skvěle vypadaly, ale i perfektně fungovaly.</p>
+            <p>Věřím, že dobrý redesign není jen o novém kabátu. Je to o pochopení uživatelů, zjednodušení cest a vytvoření zážitku, ke kterému se lidé rádi vrací.</p>
+            <p>Rád pracuji s AI nástroji — od Claude Design po asistované kódování. Díky tomu dokážu jít od nápadu k hotovému, čistě napsanému webu výrazně rychleji, jako třeba u kompletního e-shopu CEVOX Dive.</p>
+          </div>
+          <div class="skills reveal reveal-d3">
+            <span class="skill-tag" data-hover>HTML / CSS</span>
+            <span class="skill-tag" data-hover>JavaScript</span>
+            <span class="skill-tag" data-hover>Figma</span>
+            <span class="skill-tag" data-hover>UI/UX Design</span>
+            <span class="skill-tag" data-hover>Responsive</span>
+            <span class="skill-tag skill-tag-ai" data-hover>AI / Claude</span>
+            <span class="skill-tag skill-tag-ai" data-hover>Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="about-visual reveal reveal-d2 reveal-right">
+          <div class="about-card" id="aboutCard">
+            <div class="about-card-shine" id="aboutCardShine"></div>
+            <div class="about-stats">
+              <div>
+                <div class="stat-num" data-count="6">0</div>
+                <div class="stat-label">Dokončených projektů</div>
+              </div>
+              <div>
+                <div class="stat-num" data-count="3">0</div>
+                <div class="stat-label">Roky praxe</div>
+              </div>
+              <div>
+                <div class="stat-num" data-count="100">0</div>
+                <div class="stat-label">Procent nasazení</div>
+              </div>
+              <div>
+                <div class="stat-num" data-count="40">0</div>
+                <div class="stat-label">poslechnutých písniček / den</div>
+              </div>
+            </div>
+            <div class="about-quote">"Nejlepší kód je ten, který uživatel nikdy nevidí — jen cítí."</div>
+          </div>
+          <div class="about-float"></div>
+          <div class="about-float-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="projects-header reveal reveal-scale">
+        <div class="section-label">Projekty</div>
+        <h2 class="section-title">Před & Po</h2>
+        <p>Posuňte jezdcem a podívejte se, jak redesign proměnil každý web. Klikněte na záložky pro zobrazení dalších stránek.</p>
+      </div>
+
+      <!-- ═══ PROJECT 01 — FLAGSHIP: CEVOX ═══ -->
+      <div class="project project-flagship reveal" data-project>
+        <div class="flagship-badge">★ Flagship — celý web od nuly</div>
+        <div class="project-head">
+          <span class="project-num">01</span>
+          <span class="project-title">CEVOX Dive</span>
+          <div class="project-tags"><span class="project-tag">E-commerce</span><span class="project-tag">Od nuly</span><span class="project-tag">56 stránek</span></div>
+        </div>
+        <p class="project-desc">Kompletní e-commerce web pro potápěčský obchod — <strong>celý jsem ho postavil sám</strong>. 56 responzivních stránek v čistém HTML5, CSS3 a vanilla JavaScriptu, bez jediného frameworku. Od návrhu v Claude Design až po hotový, na CMS připravený kód: mega navigace, filtry katalogu, košík, pokladna i detail produktu s galerií.</p>
+
+        <div class="flagship-metrics">
+          <div class="fmetric"><span class="fmetric-num">56</span><span class="fmetric-label">stránek</span></div>
+          <div class="fmetric"><span class="fmetric-num">0</span><span class="fmetric-label">frameworků</span></div>
+          <div class="fmetric"><span class="fmetric-num">100%</span><span class="fmetric-label">responzivní</span></div>
+          <div class="fmetric"><span class="fmetric-num">1</span><span class="fmetric-label">autor — já</span></div>
+        </div>
+
+        <div class="live-wrap">
+          <div class="wip-bubble" id="wipBubble" role="status" aria-live="polite">
+            <button class="wip-close" id="wipClose" aria-label="Skrýt upozornění">×</button>
+            <span class="wip-dot" aria-hidden="true"></span>
+            <div class="wip-text">
+              <strong>Ještě na tom dělám 🚧</strong>
+              <span>Web je rozpracovaný — některé sekce jsou teprve v procesu.</span>
+            </div>
+          </div>
+          <div class="live-demo">
+          <div class="live-bar">
+            <span class="live-dots"><i></i><i></i><i></i></span>
+            <span class="live-url" id="cevoxUrl">cevox-dive.cz</span>
+            <a class="live-open" id="cevoxOpen" href="cevox/index.html" target="_blank" rel="noopener">Otevřít naživo ↗</a>
+          </div>
+          <div class="live-nav">
+            <button class="demo-tab active" data-src="cevox/index.html" data-url="cevox-dive.cz">Homepage</button>
+            <button class="demo-tab" data-src="cevox/katalog.html" data-url="cevox-dive.cz/katalog">Katalog</button>
+            <button class="demo-tab" data-src="cevox/produkt.html" data-url="cevox-dive.cz/produkt">Detail produktu</button>
+            <button class="demo-tab" data-src="cevox/kosik.html" data-url="cevox-dive.cz/kosik">Košík</button>
+            <button class="demo-tab" data-src="cevox/kurzy.html" data-url="cevox-dive.cz/kurzy">Kurzy</button>
+            <button class="demo-tab demo-tab-wip" data-src="cevox/pripravujeme.html" data-url="cevox-dive.cz/pripravujeme">Připravujeme</button>
+          </div>
+          <div class="live-frame-wrap">
+            <iframe id="cevoxFrame" class="live-frame" src="cevox/index.html" title="CEVOX Dive — živá ukázka" loading="lazy"></iframe>
+          </div>
+          <div class="live-hint">Živá ukázka — můžete se v ní proklikat a proscrollovat. Pro plný zážitek otevřete naživo v novém okně.</div>
+        </div>
+        </div>
+      </div>
+
+      <!-- ═══ PROJECT 02 ═══ -->
+      <div class="project reveal" data-project>
+        <div class="project-head">
+          <span class="project-num">02</span>
+          <span class="project-title">Švýcarské kávovary</span>
+          <div class="project-tags"><span class="project-tag">E-commerce</span><span class="project-tag">Redesign</span></div>
+        </div>
+        <p class="project-desc">Redesign e-shopu s prémiovými švýcarskými kávovary JURA — modernější hlavička, přehlednější produktové karty a zjednodušený nákupní košík.</p>
+
+        <div class="page-tabs">
+          <button class="page-tab active" data-tab="0">Homepage</button>
+          <button class="page-tab" data-tab="1">Detail produktu</button>
+          <button class="page-tab" data-tab="2">Košík</button>
+        </div>
+
+        <div class="page-content active" data-page="0">
+          <div class="comparison" data-comparison>
+            <div class="comparison-side comparison-before"><img class="shot" src="images/svycarske-homepage-pred.webp" alt="Švýcarské kávovary — Homepage před redesignem" loading="lazy"></div>
+            <div class="comparison-side comparison-after"><img class="shot" src="images/svycarske-homepage-po.webp" alt="Švýcarské kávovary — Homepage po redesignu" loading="lazy"></div>
+            <div class="comparison-handle" data-handle></div>
+            <div class="comparison-label label-before">Před</div>
+            <div class="comparison-label label-after">Po</div>
+          </div>
+        </div>
+        <div class="page-content" data-page="1">
+          <div class="comparison" data-comparison>
+            <div class="comparison-side comparison-before"><img class="shot" src="images/svycarske-detailproduktu-pred.webp" alt="Švýcarské kávovary — Detail produktu před redesignem" loading="lazy"></div>
+            <div class="comparison-side comparison-after"><img class="shot" src="images/svycarske-detailproduktu-po.webp" alt="Švýcarské kávovary — Detail produktu po redesignu" loading="lazy"></div>
+            <div class="comparison-handle" data-handle></div>
+            <div class="comparison-label label-before">Před</div>
+            <div class="comparison-label label-after">Po</div>
+          </div>
+        </div>
+        <div class="page-content" data-page="2">
+          <div class="comparison" data-comparison>
+            <div class="comparison-side comparison-before"><img class="shot" src="images/svycarske-kosik-pred.webp" alt="Švýcarské kávovary — Košík před redesignem" loading="lazy"></div>
+            <div class="comparison-side comparison-after"><img class="shot" src="images/svycarske-kosik-po.webp" alt="Švýcarské kávovary — Košík po redesignu" loading="lazy"></div>
+            <div class="comparison-handle" data-handle></div>
+            <div class="comparison-label label-before">Před</div>
+            <div class="comparison-label label-after">Po</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PROJECT 03 ═══ -->
+      <div class="project reveal" data-project>
+        <div class="project-head">
+          <span class="project-num">03</span>
+          <span class="project-title">LaPrazirna</span>
+          <div class="project-tags"><span class="project-tag">E-commerce</span><span class="project-tag">Redesign</span></div>
+        </div>
+        <p class="project-desc">Redesign webu lokální pardubické pražírny výběrové kávy — svěžejší podoba produktů, blogu i sekce recenzí.</p>
+
+        <div class="page-tabs">
+          <button class="page-tab active" data-tab="0">Homepage</button>
+          <button class="page-tab" data-tab="1">Blog</button>
+          <button class="page-tab" data-tab="2">Recenze</button>
+        </div>
+
+        <div class="page-content active" data-page="0">
+          <div class="comparison" data-comparison>
+            <div class="comparison-side comparison-before"><img class="shot" src="images/laprazirna-homepage-pred.webp" alt="LaPrazirna — Homepage před redesignem" loading="lazy"></div>
+            <div class="comparison-side comparison-after"><img class="shot" src="images/laprazirna-homepage-po.webp" alt="LaPrazirna — Homepage po redesignu" loading="lazy"></div>
+            <div class="comparison-handle" data-handle></div>
+            <div class="comparison-label label-before">Před</div>
+            <div class="comparison-label label-after">Po</div>
+          </div>
+        </div>
+        <div class="page-content" data-page="1">
+          <div class="comparison" data-comparison>
+            <div class="comparison-side comparison-before"><img class="shot" src="images/laprazirna-blog-pred.webp" alt="LaPrazirna — Blog před redesignem" loading="lazy"></div>
+            <div class="comparison-side comparison-after"><img class="shot" src="images/laprazirna-blog-po.webp" alt="LaPrazirna — Blog po redesignu" loading="lazy"></div>
+            <div class="comparison-handle" data-handle></div>
+            <div class="comparison-label label-before">Před</div>
+            <div class="comparison-label label-after">Po</div>
+          </div>
+        </div>
+        <div class="page-content" data-page="2">
+          <div class="comparison" data-comparison>
+            <div class="comparison-side comparison-before"><img class="shot" src="images/laprazirna-recenze-pred.webp" alt="LaPrazirna — Recenze před redesignem" loading="lazy"></div>
+            <div class="comparison-side comparison-after"><img class="shot" src="images/laprazirna-recenze-po.webp" alt="LaPrazirna — Recenze po redesignu" loading="lazy"></div>
+            <div class="comparison-handle" data-handle></div>
+            <div class="comparison-label label-before">Před</div>
+            <div class="comparison-label label-after">Po</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PROJECT 04 ═══ -->
+      <div class="project reveal" data-project>
+        <div class="project-head">
+          <span class="project-num">04</span>
+          <span class="project-title">Německé kávovary</span>
+          <div class="project-tags"><span class="project-tag">E-commerce</span><span class="project-tag">Redesign</span></div>
+        </div>
+        <p class="project-desc">Redesign e-shopu se značkou NIVONA — nová homepage, přehlednější výpis produktů i jejich detail.</p>
+
+        <div class="page-tabs">
+          <button class="page-tab active" data-tab="0">Homepage</button>
+          <button class="page-tab" data-tab="1">Detail produktu</button>
+          <button class="page-tab" data-tab="2">Seznam produktů</button>
+        </div>
+
+        <div class="page-content active" data-page="0">
+          <div class="comparison" data-comparison>
+            <div class="comparison-side comparison-before"><img class="shot" src="images/nemecke-homepage-pred.webp" alt="Německé kávovary — Homepage před redesignem" loading="lazy"></div>
+            <div class="comparison-side comparison-after"><img class="shot" src="images/nemecke-homepage-po.webp" alt="Německé kávovary — Homepage po redesignu" loading="lazy"></div>
+            <div class="comparison-handle" data-handle></div>
+            <div class="comparison-label label-before">Před</div>
+            <div class="comparison-label label-after">Po</div>
+          </div>
+        </div>
+        <div class="page-content" data-page="1">
+          <div class="comparison" data-comparison>
+            <div class="comparison-side comparison-before"><img class="shot" src="images/nemecke-detailproduktu-pred.webp" alt="Německé kávovary — Detail produktu před redesignem" loading="lazy"></div>
+            <div class="comparison-side comparison-after"><img class="shot" src="images/nemecke-detailproduktu-po.webp" alt="Německé kávovary — Detail produktu po redesignu" loading="lazy"></div>
+            <div class="comparison-handle" data-handle></div>
+            <div class="comparison-label label-before">Před</div>
+            <div class="comparison-label label-after">Po</div>
+          </div>
+        </div>
+        <div class="page-content" data-page="2">
+          <div class="comparison" data-comparison>
+            <div class="comparison-side comparison-before"><img class="shot" src="images/nemecke-seznamproduktu-pred.webp" alt="Německé kávovary — Seznam produktů před redesignem" loading="lazy"></div>
+            <div class="comparison-side comparison-after"><img class="shot" src="images/nemecke-seznamproduktu-po.webp" alt="Německé kávovary — Seznam produktů po redesignu" loading="lazy"></div>
+            <div class="comparison-handle" data-handle></div>
+            <div class="comparison-label label-before">Před</div>
+            <div class="comparison-label label-after">Po</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PROJECT 05 ═══ -->
+      <div class="project reveal" data-project>
+        <div class="project-head">
+          <span class="project-num">05</span>
+          <span class="project-title">specShop → Specialky</span>
+          <div class="project-tags"><span class="project-tag">Branding</span><span class="project-tag">Redesign</span></div>
+        </div>
+        <p class="project-desc">Rebranding zastřešující e-commerce platformy, která provozuje výše uvedené e-shopy — z původní identity specShop na nový vizuál Specialky.</p>
+        <div class="page-content active" data-page="0">
+          <div class="comparison" data-comparison>
+            <div class="comparison-side comparison-before"><img class="shot" src="images/specshop-homepage.webp" alt="specShop → Specialky — Homepage před redesignem" loading="lazy"></div>
+            <div class="comparison-side comparison-after"><img class="shot" src="images/specialky-homepage.webp" alt="specShop → Specialky — Homepage po redesignu" loading="lazy"></div>
+            <div class="comparison-handle" data-handle></div>
+            <div class="comparison-label label-before">Před</div>
+            <div class="comparison-label label-after">Po</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-header reveal">
+        <div class="section-label">Kontakt</div>
+        <h2 class="section-title">Pojďme spolu vytvořit něco <span class="accent" data-text="skvělého">skvělého</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form-wrap reveal reveal-d1">
+          <div class="form-card">
+            <div class="form-fields">
+              <!-- Honeypot — boti vyplní, lidi nevidí -->
+              <input type="text" name="botcheck" id="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
+              <input type="text" name="website" id="honeypot" class="hp-field" tabindex="-1" autocomplete="off" placeholder="website">
+              <div class="form-group">
+                <label class="form-label" for="fname">Jméno</label>
+                <input type="text" id="fname" class="form-input" placeholder="Jan Novotný" data-hover>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="femail">Email</label>
+                <input type="email" id="femail" class="form-input" placeholder="jan@email.cz" data-hover>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fmsg">Zpráva</label>
+                <textarea id="fmsg" class="form-input form-textarea" rows="4" placeholder="Popište mi váš projekt..." data-hover></textarea>
+              </div>
+              <button type="button" class="form-submit" id="formSubmit" data-hover>
+                Odeslat zprávu
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <div class="form-success-icon">✓</div>
+              <div class="form-success-title">Díky za zprávu!</div>
+              <div class="form-success-text">Email byl odeslán. Ozvu se co nejdříve.</div>
+            </div>
+            <div class="form-error" id="formError">
+              <div class="form-success-icon" style="background:rgba(224,96,96,0.12);color:#e06060;">✕</div>
+              <div class="form-success-title">Něco se pokazilo</div>
+              <div class="form-success-text">Zkuste to znovu nebo mi napište na <span id="errorEmail"></span></div>
+              <button type="button" class="form-retry" id="formRetry" data-hover>Zkusit znovu</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="contact-links reveal reveal-d2">
+          <p class="contact-text">Máte projekt, který potřebuje nový vizuál? Vyplňte formulář nebo mě kontaktujte přímo.</p>
+          <div class="contact-list">
+            <div class="contact-item contact-item-copy" id="emailCopy" data-hover>
+              <div>
+                <div class="contact-item-name">Email</div>
+                <div class="contact-item-val" id="emailVal"></div>
+              </div>
+              <span class="contact-item-arrow" id="emailIcon">⎘</span>
+            </div>
+            <a href="https://www.linkedin.com/in/connect-matej-novak" target="_blank" class="contact-item" data-hover>
+              <div>
+                <div class="contact-item-name">LinkedIn</div>
+                <div class="contact-item-val">linkedin.com/in/connect-matej-novak</div>
+              </div>
+              <span class="contact-item-arrow">→</span>
+            </a>
+            <a href="https://github.com/matejnov" target="_blank" class="contact-item" data-hover>
+              <div>
+                <div class="contact-item-name">GitHub</div>
+                <div class="contact-item-val">github.com/matejnov</div>
+              </div>
+              <span class="contact-item-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-copy">© 2026 Matěj Novák</div>
+      <a href="#" class="footer-top" data-hover>Zpět nahoru ↑</a>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════ -->
+  <script>
+    /* ═══════════════════════════════════════
+       ENHANCED JAVASCRIPT — More WOW!
+    ═══════════════════════════════════════ */
+
+    /* ── Custom Cursor ── */
+    const cursor = document.getElementById('cursor');
+    const cursorDot = document.getElementById('cursorDot');
+    let mx = 0, my = 0, cx = 0, cy = 0;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursorDot.style.left = mx + 'px';
+      cursorDot.style.top = my + 'px';
+      cursor.classList.add('visible');
+      cursorDot.classList.add('visible');
+    });
+    document.addEventListener('mouseleave', () => {
+      cursor.classList.remove('visible');
+      cursorDot.classList.remove('visible');
+    });
+
+    (function loop() {
+      cx += (mx - cx) * 0.11;
+      cy += (my - cy) * 0.11;
+      cursor.style.left = cx + 'px';
+      cursor.style.top = cy + 'px';
+      requestAnimationFrame(loop);
+    })();
+
+    document.querySelectorAll('[data-hover], a, button, .skill-tag').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+
+    /* ── Hero Mouse Glow (follows cursor) ── */
+    const heroGlow = document.getElementById('heroGlow');
+    const heroSection = document.querySelector('.hero');
+
+    if (heroSection && heroGlow) {
+      heroSection.addEventListener('mousemove', e => {
+        const rect = heroSection.getBoundingClientRect();
+        heroGlow.style.left = (e.clientX - rect.left) + 'px';
+        heroGlow.style.top = (e.clientY - rect.top) + 'px';
+      });
+    }
+
+    /* ── Ripple effect on buttons ── */
+    document.querySelectorAll('.btn, .form-submit').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+        this.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    /* ── Magnetic Buttons (subtle pull toward cursor) ── */
+    document.querySelectorAll('.btn, .nav-cta, .nav-logo').forEach(el => {
+      el.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        this.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+      });
+      el.addEventListener('mouseleave', function() {
+        this.style.transform = '';
+      });
+    });
+
+    /* ── 3D Tilt on About Card ── */
+    const aboutCard = document.getElementById('aboutCard');
+    const aboutCardShine = document.getElementById('aboutCardShine');
+
+    if (aboutCard) {
+      const aboutVisual = aboutCard.closest('.about-visual');
+      
+      aboutVisual.addEventListener('mousemove', function(e) {
+        const rect = aboutCard.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / centerY * -6;
+        const rotateY = (x - centerX) / centerX * 6;
+        
+        aboutCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        
+        if (aboutCardShine) {
+          aboutCardShine.style.setProperty('--shine-x', (x / rect.width * 100) + '%');
+          aboutCardShine.style.setProperty('--shine-y', (y / rect.height * 100) + '%');
+        }
+      });
+      
+      aboutVisual.addEventListener('mouseleave', function() {
+        aboutCard.style.transform = '';
+      });
+    }
+
+    /* ── Nav + Scroll Effects ── */
+    const progressBar = document.getElementById('scrollProgress');
+    const heroContent = document.querySelector('.hero-content');
+    const heroGlows = document.querySelectorAll('.hero-glow');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+
+      document.getElementById('nav').classList.toggle('scrolled', scrollY > 50);
+      progressBar.style.width = (scrollY / docH * 100) + '%';
+
+      if (heroSection) {
+        const heroH = heroSection.offsetHeight;
+        const p = Math.min(scrollY / heroH, 1);
+        heroContent.style.opacity = 1 - p * 1.3;
+        heroContent.style.transform = 'translateY(' + (scrollY * 0.3) + 'px) scale(' + (1 - p * 0.05) + ')';
+        heroGlows.forEach((g, i) => {
+          g.style.transform = 'translateY(' + (scrollY * (i === 0 ? 0.15 : -0.1)) + 'px)';
+        });
+      }
+    });
+
+    /* ── Scroll Reveal (enhanced — multiple directions) ── */
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => obs.observe(el));
+
+    /* ── Skill Tags — Staggered Pop-in ── */
+    const skillsObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const tags = e.target.querySelectorAll('.skill-tag');
+        tags.forEach((tag, i) => {
+          setTimeout(() => {
+            tag.classList.add('pop-in');
+          }, i * 100);
+        });
+        skillsObs.unobserve(e.target);
+      });
+    }, { threshold: 0.3 });
+
+    const skillsContainer = document.querySelector('.skills');
+    if (skillsContainer) skillsObs.observe(skillsContainer);
+
+    /* ── Counter Animation ── */
+    const cObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const t = +e.target.dataset.count;
+        const start = performance.now();
+        (function step(now) {
+          const p = Math.min((now - start) / 1400, 1);
+          const v = Math.round((1 - Math.pow(1 - p, 4)) * t);
+          e.target.textContent = v + (t === 100 ? '%' : '+');
+          if (p < 1) requestAnimationFrame(step);
+        })(start);
+        cObs.unobserve(e.target);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(el => cObs.observe(el));
+
+    /* ── Text Scramble Effect on Hero Accent ── */
+    const accentEl = document.querySelector('.hero h1 .accent');
+    if (accentEl) {
+      const originalText = accentEl.textContent;
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%';
+      let scrambleInterval;
+      
+      accentEl.addEventListener('mouseenter', () => {
+        let iteration = 0;
+        clearInterval(scrambleInterval);
+        scrambleInterval = setInterval(() => {
+          accentEl.textContent = originalText
+            .split('')
+            .map((char, idx) => {
+              if (idx < iteration) return originalText[idx];
+              return chars[Math.floor(Math.random() * chars.length)];
+            })
+            .join('');
+          iteration += 1 / 2;
+          if (iteration >= originalText.length) {
+            clearInterval(scrambleInterval);
+            accentEl.textContent = originalText;
+          }
+        }, 30);
+      });
+    }
+
+    /* ── Live Demo (CEVOX) — přepínání stránek v iframu ── */
+    (function initLiveDemo() {
+      const frame = document.getElementById('cevoxFrame');
+      if (!frame) return;
+      const urlLabel = document.getElementById('cevoxUrl');
+      const openBtn = document.getElementById('cevoxOpen');
+      document.querySelectorAll('.demo-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const src = tab.dataset.src;
+          frame.classList.add('is-loading');
+          frame.src = src;
+          if (openBtn) openBtn.href = src;
+          if (urlLabel && tab.dataset.url) urlLabel.textContent = tab.dataset.url;
+        });
+      });
+      frame.addEventListener('load', () => frame.classList.remove('is-loading'));
+
+      /* WIP bublina — skrytí */
+      const wip = document.getElementById('wipBubble');
+      const wipClose = document.getElementById('wipClose');
+      if (wip && wipClose) {
+        wipClose.addEventListener('click', () => {
+          wip.classList.add('is-hidden');
+          setTimeout(() => { wip.style.display = 'none'; }, 300);
+        });
+      }
+    })();
+
+    /* ── Page Tabs ── */
+    document.querySelectorAll('[data-project]').forEach(project => {
+      const tabs = project.querySelectorAll('.page-tab');
+      const pages = project.querySelectorAll('.page-content');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const idx = tab.dataset.tab;
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          pages.forEach(p => {
+            p.classList.toggle('active', p.dataset.page === idx);
+          });
+          const activePage = project.querySelector('.page-content.active');
+          const comp = activePage.querySelector('[data-comparison]');
+          if (comp) resetSlider(comp);
+        });
+      });
+    });
+
+    function resetSlider(comp) {
+      const before = comp.querySelector('.comparison-before');
+      const handle = comp.querySelector('[data-handle]');
+      before.style.clipPath = 'inset(0 50% 0 0)';
+      handle.style.left = '50%';
+      if (comp._resetScroll) comp._resetScroll();
+    }
+
+    /* ── Comparison Slider + synchronizovaný scroll ── */
+    let activeComp = null;
+
+    function initComparison(comp) {
+      const handle = comp.querySelector('[data-handle]');
+      const before = comp.querySelector('.comparison-before');
+      const beforeImg = comp.querySelector('.comparison-before .shot');
+      const afterImg = comp.querySelector('.comparison-after .shot');
+
+      /* ── jezdec před/po ── */
+      function update(x) {
+        const r = comp.getBoundingClientRect();
+        let pct = ((x - r.left) / r.width) * 100;
+        pct = Math.max(3, Math.min(97, pct));
+        before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+        handle.style.left = pct + '%';
+      }
+
+      /* ── scroll obou stran zároveň (procentuálně, ať konce sedí) ── */
+      let scrollP = 0;
+      function applyScroll() {
+        const fh = comp.clientHeight;
+        const bMax = Math.max(0, beforeImg.offsetHeight - fh);
+        const aMax = Math.max(0, afterImg.offsetHeight - fh);
+        beforeImg.style.transform = `translateY(${-scrollP * bMax}px)`;
+        afterImg.style.transform  = `translateY(${-scrollP * aMax}px)`;
+      }
+      comp._resetScroll = () => { scrollP = 0; applyScroll(); };
+
+      comp.addEventListener('wheel', e => {
+        e.preventDefault();
+        scrollP = Math.min(1, Math.max(0, scrollP + e.deltaY / 1600));
+        applyScroll();
+      }, { passive: false });
+
+      /* touch: rozliš svislý scroll od vodorovného tažení jezdce */
+      let tY = null, tX = null, mode = null;
+      comp.addEventListener('touchstart', e => {
+        tY = e.touches[0].clientY; tX = e.touches[0].clientX;
+        mode = e.target.closest('[data-handle]') ? 'slide' : null;
+      }, { passive: true });
+      comp.addEventListener('touchmove', e => {
+        if (tY === null) return;
+        const y = e.touches[0].clientY, x = e.touches[0].clientX;
+        if (mode === null) mode = Math.abs(x - tX) > Math.abs(y - tY) ? 'slide' : 'scroll';
+        if (mode === 'scroll') {
+          scrollP = Math.min(1, Math.max(0, scrollP + (tY - y) / (comp.clientHeight * 1.2)));
+          tY = y; applyScroll(); e.preventDefault();
+        } else { update(x); e.preventDefault(); }
+      }, { passive: false });
+      comp.addEventListener('touchend', () => { tY = null; mode = null; });
+
+      /* přepočet po načtení obrázků a při změně velikosti */
+      [beforeImg, afterImg].forEach(im => { if (!im.complete) im.addEventListener('load', applyScroll); });
+      window.addEventListener('resize', applyScroll);
+      applyScroll();
+
+      /* jezdec myší */
+      handle.addEventListener('mousedown', e => { e.preventDefault(); activeComp = { update }; });
+      comp.addEventListener('click', e => {
+        if (!e.target.closest('[data-handle]')) update(e.clientX);
+      });
+    }
+
+    document.addEventListener('mousemove', e => { if (activeComp) activeComp.update(e.clientX); });
+    document.addEventListener('mouseup', () => activeComp = null);
+
+    document.querySelectorAll('[data-comparison]').forEach(initComparison);
+
+    /* ── Smooth Scroll ── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    /* ── Parallax for Floating Shapes (subtle mouse-driven) ── */
+    const floatingShapes = document.querySelectorAll('.floating-shape');
+    document.addEventListener('mousemove', e => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+      floatingShapes.forEach((shape, i) => {
+        const speed = (i + 1) * 4;
+        shape.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+      });
+    });
+
+    /* ── Email Obfuskace ── */
+    const _e = ['m','a','t','2','n','o','v','a','k'];
+    const _d = ['s','e','z','n','a','m'];
+    const _addr = _e.join('') + String.fromCharCode(64) + _d.join('') + '.' + 'cz';
+
+    document.getElementById('emailVal').textContent = _addr;
+    const errEmail = document.getElementById('errorEmail');
+    if (errEmail) errEmail.textContent = _addr;
+
+    /* ── Email Copy to Clipboard ── */
+    const emailCopy = document.getElementById('emailCopy');
+    const emailIcon = document.getElementById('emailIcon');
+    const emailText = document.getElementById('emailVal');
+
+    emailCopy.addEventListener('click', () => {
+      navigator.clipboard.writeText(_addr).then(() => {
+        emailText.textContent = 'Zkopírováno! \u2713';
+        emailText.style.color = 'var(--accent)';
+        emailIcon.textContent = '\u2713';
+        setTimeout(() => {
+          emailText.textContent = _addr;
+          emailText.style.color = '';
+          emailIcon.textContent = '\u238b';
+        }, 2000);
+      });
+    });
+
+    /* ── Contact Form (Web3Forms + Anti-spam) ── */
+    const WEB3FORMS_KEY = '0003659d-3168-4b73-a450-97c7cb0b900d';
+
+    const formSubmit = document.getElementById('formSubmit');
+    const formFields = document.querySelector('.form-fields');
+    const formSuccess = document.getElementById('formSuccess');
+    const formError = document.getElementById('formError');
+    const pageLoadTime = Date.now();
+    let formSubmitted = false;
+
+    formSubmit.addEventListener('click', async () => {
+      if (document.getElementById('honeypot').value || document.getElementById('botcheck').value) {
+        formFields.style.display = 'none';
+        formSuccess.classList.add('show');
+        return;
+      }
+      if (Date.now() - pageLoadTime < 3000) {
+        formFields.style.display = 'none';
+        formSuccess.classList.add('show');
+        return;
+      }
+      if (formSubmitted) return;
+
+      const name = document.getElementById('fname').value.trim();
+      const email = document.getElementById('femail').value.trim();
+      const msg = document.getElementById('fmsg').value.trim();
+
+      if (!name || !email || !msg) {
+        formSubmit.style.animation = 'shake 0.4s ease';
+        setTimeout(() => formSubmit.style.animation = '', 400);
+        [['fname', name], ['femail', email], ['fmsg', msg]].forEach(([id, val]) => {
+          const el = document.getElementById(id);
+          if (!val) {
+            el.style.borderColor = '#e06060';
+            setTimeout(() => el.style.borderColor = '', 1500);
+          }
+        });
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        const el = document.getElementById('femail');
+        el.style.borderColor = '#e06060';
+        setTimeout(() => el.style.borderColor = '', 1500);
+        return;
+      }
+
+      formSubmitted = true;
+      formSubmit.disabled = true;
+      formSubmit.innerHTML = '<span class="spinner"></span> Odes\u00edl\u00e1m...';
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_KEY,
+            subject: 'Portfolio \u2014 zpr\u00e1va od ' + name,
+            from_name: name,
+            email: email,
+            message: msg,
+            botcheck: ''
+          })
+        });
+        const data = await res.json();
+        if (data.success) {
+          formFields.style.display = 'none';
+          formSuccess.classList.add('show');
+        } else {
+          throw new Error('Odesl\u00e1n\u00ed selhalo');
+        }
+      } catch (err) {
+        formSubmitted = false;
+        formFields.style.display = 'none';
+        formError.classList.add('show');
+      }
+    });
+
+    document.getElementById('formRetry').addEventListener('click', () => {
+      formError.classList.remove('show');
+      formFields.style.display = 'flex';
+      formSubmitted = false;
+      formSubmit.disabled = false;
+      formSubmit.innerHTML = 'Odeslat zpr\u00e1vu <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+    });
+
+    /* ── Particles + Constellations ── */
+    (function() {
+      const canvas = document.getElementById('particles');
+      const ctx = canvas.getContext('2d');
+      let w, h, particles = [];
+      let mouseX = -999, mouseY = -999;
+
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', () => { resize(); placeConstellations(); });
+      document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+
+      /* ── Constellation Data (relative coords 0-1) ── */
+      const constellationDefs = [
+        {
+          name: 'Orion',
+          stars: [[0.25,0],[0.75,0],[0,0.35],[0.5,0.4],[1,0.35],[0.35,0.55],[0.65,0.55],[0.15,1],[0.5,0.85],[0.85,1]],
+          lines: [[0,3],[1,3],[2,3],[3,4],[3,5],[3,6],[5,7],[5,6],[6,9],[5,8],[6,8]],
+          w: 130, h: 180
+        },
+        {
+          name: 'Velk\u00fd v\u016fz',
+          stars: [[0,0.4],[0.2,0],[0.45,0.05],[0.6,0.35],[0.72,0.45],[0.88,0.3],[1,0.55]],
+          lines: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,3]],
+          w: 200, h: 110
+        },
+        {
+          name: 'Cassiopeia',
+          stars: [[0,0.6],[0.25,0],[0.5,0.5],[0.75,0.05],[1,0.65]],
+          lines: [[0,1],[1,2],[2,3],[3,4]],
+          w: 160, h: 80
+        },
+        {
+          name: 'Lev',
+          stars: [[0,0.3],[0.15,0],[0.35,0.05],[0.45,0.25],[0.3,0.4],[0.55,0.5],[0.75,0.55],[1,0.45],[1,0.7]],
+          lines: [[0,1],[1,2],[2,3],[3,4],[4,0],[3,5],[5,6],[6,7],[7,8]],
+          w: 180, h: 140
+        },
+        {
+          name: '\u0160t\u00edr',
+          stars: [[0.4,0],[0.5,0.1],[0.45,0.25],[0.35,0.4],[0.2,0.55],[0.1,0.7],[0,0.85],[0.05,1],[0.2,0.95]],
+          lines: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8]],
+          w: 120, h: 200
+        },
+        {
+          name: 'Lyra',
+          stars: [[0.5,0],[0.2,0.4],[0.8,0.4],[0.15,0.8],[0.85,0.8],[0.5,1]],
+          lines: [[0,1],[0,2],[1,3],[2,4],[3,5],[4,5],[1,2]],
+          w: 100, h: 120
+        },
+        {
+          name: 'Bl\u00ed\u017eenci',
+          stars: [[0.1,0],[0.9,0.05],[0.15,0.25],[0.85,0.3],[0.3,0.5],[0.7,0.5],[0.45,0.75],[0.55,0.75],[0.5,1]],
+          lines: [[0,2],[2,4],[4,6],[6,8],[1,3],[3,5],[5,7],[7,8],[4,5]],
+          w: 150, h: 190
+        },
+        {
+          name: 'Labu\u0165',
+          stars: [[0.5,0],[0.5,0.3],[0.5,0.55],[0.15,0.45],[0.85,0.45],[0.5,0.8],[0.3,1],[0.7,1]],
+          lines: [[0,1],[1,2],[2,5],[5,6],[5,7],[1,3],[1,4]],
+          w: 140, h: 160
+        }
+      ];
+
+      /* ── Place constellations on screen ── */
+      const constellations = [];
+
+      function placeConstellations() {
+        constellations.length = 0;
+        // Shuffle and pick how many fit
+        const shuffled = [...constellationDefs].sort(() => Math.random() - 0.5);
+        const margin = 80;
+        const cellsX = Math.floor(w / 340);
+        const cellsY = Math.floor(h / 320);
+        const cellW = w / Math.max(cellsX, 1);
+        const cellH = h / Math.max(cellsY, 1);
+        let idx = 0;
+
+        for (let gy = 0; gy < cellsY && idx < shuffled.length; gy++) {
+          for (let gx = 0; gx < cellsX && idx < shuffled.length; gx++) {
+            // Skip some cells for organic feel
+            if (Math.random() < 0.3) continue;
+            const def = shuffled[idx++];
+            const ox = cellW * gx + margin + Math.random() * (cellW - def.w - margin * 2);
+            const oy = cellH * gy + margin + Math.random() * (cellH - def.h - margin * 2);
+
+            const stars = def.stars.map(s => ({
+              baseX: ox + s[0] * def.w,
+              baseY: oy + s[1] * def.h,
+              x: ox + s[0] * def.w,
+              y: oy + s[1] * def.h,
+              r: 1.2 + Math.random() * 1.2,
+              twinkleSpeed: 0.5 + Math.random() * 2,
+              twinklePhase: Math.random() * Math.PI * 2,
+              brightness: 0.6 + Math.random() * 0.4
+            }));
+
+            constellations.push({
+              name: def.name,
+              stars,
+              lines: def.lines,
+              ox, oy, w: def.w, h: def.h,
+              driftX: (Math.random() - 0.5) * 0.06,
+              driftY: (Math.random() - 0.5) * 0.04,
+              driftPhaseX: Math.random() * Math.PI * 2,
+              driftPhaseY: Math.random() * Math.PI * 2,
+              highlight: 0, // 0-1 for mouse proximity glow
+              labelAlpha: 0
+            });
+          }
+        }
+      }
+      placeConstellations();
+
+      /* ── Background particles (fewer, dimmer) ── */
+      const count = Math.min(40, Math.floor(w / 35));
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * w, y: Math.random() * h,
+          r: Math.random() * 1 + 0.3,
+          dx: (Math.random() - 0.5) * 0.15,
+          dy: (Math.random() - 0.5) * 0.15,
+          o: Math.random() * 0.15 + 0.03,
+          baseO: Math.random() * 0.15 + 0.03,
+          pulseSpeed: Math.random() * 0.015 + 0.003
+        });
+      }
+
+      let time = 0;
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        time += 0.016;
+
+        /* ── Draw background particles ── */
+        particles.forEach(p => {
+          const dmx = p.x - mouseX, dmy = p.y - mouseY;
+          const md = Math.sqrt(dmx * dmx + dmy * dmy);
+          if (md < 120) { p.x += (dmx / md) * (120 - md) / 120 * 0.4; p.y += (dmy / md) * (120 - md) / 120 * 0.4; }
+          p.x += p.dx; p.y += p.dy;
+          if (p.x < 0) p.x = w; if (p.x > w) p.x = 0;
+          if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
+          p.o = p.baseO + Math.sin(time * p.pulseSpeed * 60) * 0.06;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(93, 202, 165, ' + Math.max(0, p.o) + ')';
+          ctx.fill();
+        });
+
+        // Subtle connecting lines between close particles
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 100) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = 'rgba(93, 202, 165, ' + (0.04 * (1 - dist / 100)) + ')';
+              ctx.lineWidth = 0.4;
+              ctx.stroke();
+            }
+          }
+        }
+
+        /* ── Draw Constellations ── */
+        constellations.forEach(c => {
+          // Gentle drift
+          const driftTime = time * 0.3;
+          const shiftX = Math.sin(driftTime * 0.7 + c.driftPhaseX) * 8;
+          const shiftY = Math.cos(driftTime * 0.5 + c.driftPhaseY) * 6;
+
+          // Update star positions with drift
+          c.stars.forEach(s => {
+            s.x = s.baseX + shiftX;
+            s.y = s.baseY + shiftY;
+          });
+
+          // Check mouse proximity to constellation center
+          const cx = c.ox + c.w / 2 + shiftX;
+          const cy = c.oy + c.h / 2 + shiftY;
+          const mouseDist = Math.sqrt((mouseX - cx) ** 2 + (mouseY - cy) ** 2);
+          const hoverRadius = Math.max(c.w, c.h) * 0.9;
+          const targetHighlight = mouseDist < hoverRadius ? (1 - mouseDist / hoverRadius) : 0;
+          c.highlight += (targetHighlight - c.highlight) * 0.06;
+
+          const targetLabel = mouseDist < hoverRadius * 0.6 ? 1 : 0;
+          c.labelAlpha += (targetLabel - c.labelAlpha) * 0.05;
+
+          // Mouse repulsion on individual stars
+          c.stars.forEach(s => {
+            const sdx = s.x - mouseX, sdy = s.y - mouseY;
+            const sd = Math.sqrt(sdx * sdx + sdy * sdy);
+            if (sd < 80) {
+              const push = (80 - sd) / 80 * 6;
+              s.x += (sdx / sd) * push;
+              s.y += (sdy / sd) * push;
+            }
+          });
+
+          const baseAlpha = 0.12 + c.highlight * 0.55;
+          const lineAlpha = 0.06 + c.highlight * 0.35;
+          const glowAmount = c.highlight;
+
+          // Draw connection lines
+          c.lines.forEach(([a, b]) => {
+            const sa = c.stars[a], sb = c.stars[b];
+            ctx.beginPath();
+            ctx.moveTo(sa.x, sa.y);
+            ctx.lineTo(sb.x, sb.y);
+            ctx.strokeStyle = 'rgba(93, 202, 165, ' + lineAlpha + ')';
+            ctx.lineWidth = 0.6 + glowAmount * 0.8;
+            ctx.stroke();
+
+            // Glow line
+            if (glowAmount > 0.05) {
+              ctx.beginPath();
+              ctx.moveTo(sa.x, sa.y);
+              ctx.lineTo(sb.x, sb.y);
+              ctx.strokeStyle = 'rgba(93, 202, 165, ' + (glowAmount * 0.08) + ')';
+              ctx.lineWidth = 4;
+              ctx.stroke();
+            }
+          });
+
+          // Draw stars
+          c.stars.forEach(s => {
+            const twinkle = Math.sin(time * s.twinkleSpeed + s.twinklePhase) * 0.3 + 0.7;
+            const alpha = baseAlpha * twinkle * s.brightness;
+            const r = s.r * (1 + glowAmount * 0.5);
+
+            // Outer glow
+            if (glowAmount > 0.05) {
+              ctx.beginPath();
+              ctx.arc(s.x, s.y, r * 4, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(93, 202, 165, ' + (alpha * glowAmount * 0.12) + ')';
+              ctx.fill();
+            }
+
+            // Medium glow
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, r * 2, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(93, 202, 165, ' + (alpha * 0.2) + ')';
+            ctx.fill();
+
+            // Star core
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(180, 235, 215, ' + alpha + ')';
+            ctx.fill();
+
+            // Bright center
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, r * 0.4, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255, 255, 255, ' + (alpha * 0.8) + ')';
+            ctx.fill();
+
+            // Cross sparkle on bright stars when highlighted
+            if (glowAmount > 0.3 && s.r > 1.5) {
+              const sparkLen = r * 3 * glowAmount;
+              ctx.strokeStyle = 'rgba(200, 240, 225, ' + (alpha * glowAmount * 0.3) + ')';
+              ctx.lineWidth = 0.5;
+              ctx.beginPath();
+              ctx.moveTo(s.x - sparkLen, s.y);
+              ctx.lineTo(s.x + sparkLen, s.y);
+              ctx.stroke();
+              ctx.beginPath();
+              ctx.moveTo(s.x, s.y - sparkLen);
+              ctx.lineTo(s.x, s.y + sparkLen);
+              ctx.stroke();
+            }
+          });
+
+          // Draw name label on hover
+          if (c.labelAlpha > 0.02) {
+            ctx.save();
+            ctx.font = '500 11px Manrope, system-ui, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillStyle = 'rgba(93, 202, 165, ' + (c.labelAlpha * 0.7) + ')';
+            ctx.letterSpacing = '2px';
+            ctx.fillText(c.name.toUpperCase(), cx, c.oy + c.h + shiftY + 22);
+            ctx.restore();
+          }
+        });
+
+        /* ── Mouse → nearest constellation star connections ── */
+        let closestStars = [];
+        constellations.forEach(c => {
+          c.stars.forEach(s => {
+            const d = Math.sqrt((s.x - mouseX) ** 2 + (s.y - mouseY) ** 2);
+            if (d < 180) closestStars.push({ x: s.x, y: s.y, d });
+          });
+        });
+        closestStars.sort((a, b) => a.d - b.d);
+        closestStars.slice(0, 3).forEach(s => {
+          ctx.beginPath();
+          ctx.moveTo(mouseX, mouseY);
+          ctx.lineTo(s.x, s.y);
+          ctx.strokeStyle = 'rgba(93, 202, 165, ' + (0.12 * (1 - s.d / 180)) + ')';
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        });
+
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+
+  </script>
+
+</body>
+</html>
